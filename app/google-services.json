@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "860202156062",
+    "firebase_url": "https://dynamiclinksexample-ceb53.firebaseio.com",
+    "project_id": "dynamiclinksexample-ceb53",
+    "storage_bucket": "dynamiclinksexample-ceb53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860202156062:android:db20d1a0775faa7b",
+        "android_client_info": {
+          "package_name": "com.edulara.android.dynamiclinkexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860202156062-tut3rs6e3lll98cspo1d65s5jffb584l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe0G9sCJejny3w5df7QndvSC-SBXPqEwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860202156062-tut3rs6e3lll98cspo1d65s5jffb584l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
