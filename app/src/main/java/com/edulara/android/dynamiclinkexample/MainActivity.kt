@@ -5,15 +5,29 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.dynamiclinks.DynamicLink
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
+import com.google.firebase.dynamiclinks.PendingDynamicLinkData
 import com.google.firebase.dynamiclinks.ShortDynamicLink
+import java.net.URI
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        FirebaseDynamicLinks.getInstance().getDynamicLink(intent).addOnSuccessListener(this) {pendingDynamicLinkData ->
+            var deepLink : Uri? =null
+            if (pendingDynamicLinkData != null){
+                deepLink = pendingDynamicLinkData.link
+                Toast.makeText(this, deepLink.toString(), Toast.LENGTH_LONG).show()
+            }
+        }.addOnFailureListener(this) {e ->
+            Log.w("ErrorDynamicLink", e)
+        }
+
     }
 
     fun LargeDynamicLinks(view : android.view.View){
@@ -35,8 +49,6 @@ class MainActivity : AppCompatActivity() {
                 .setDomainUriPrefix("https://edulara.page.link")
                 .setAndroidParameters(DynamicLink.AndroidParameters.Builder().build())
                 .setIosParameters(DynamicLink.IosParameters.Builder("com.example.ios").build())
-                // Set parameters
-                // ...
                 .buildShortDynamicLink(ShortDynamicLink.Suffix.SHORT)
                 .addOnSuccessListener { result ->
                     // Short link created
