@@ -7,11 +7,56 @@
     android:layout_height="match_parent"
     tools:context="com.edulara.android.dynamiclinkexample.MainActivity">
 
-    <TextView
-        android:id="@+id/tvDynamicLinks"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/ivAccountImage"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:src="@drawable/ic_account_circle_black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nameDeveloper"
+        android:layout_below="@+id/ivAccountImage"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tvCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/charge"
+        android:layout_below="@+id/tvName"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numberPhone"
+        android:layout_below="@+id/tvCharge"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/ivFirebaseLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/firebase_logo"
+        android:layout_below="@+id/tvPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -21,7 +66,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:src="@android:drawable/ic_menu_share"/>
+        android:src="@android:drawable/ic_menu_share"
+        android:backgroundTint="@android:color/holo_orange_dark"/>
 
 
 </RelativeLayout>
